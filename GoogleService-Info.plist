@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>247399377341-v2736bh19munhod8qjr3dkn51f8mn551.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.247399377341-v2736bh19munhod8qjr3dkn51f8mn551</string>
+	<key>API_KEY</key>
+	<string>AIzaSyApeS8fI3T82zUHPBIpAve0Wvk8dT232rQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>247399377341</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Joywalker.Capture-app</string>
+	<key>PROJECT_ID</key>
+	<string>captureit-2b2ba</string>
+	<key>STORAGE_BUCKET</key>
+	<string>captureit-2b2ba.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:247399377341:ios:4a5c96a5718da482</string>
+	<key>DATABASE_URL</key>
+	<string>https://captureit-2b2ba.firebaseio.com</string>
+</dict>
+</plist>
