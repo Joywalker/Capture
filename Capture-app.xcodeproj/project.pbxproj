@@ -17,6 +17,9 @@
 		C42B8F692014DD2B006D1753 /* Capture_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C42B8F672014DD2B006D1753 /* Capture_app.xcdatamodeld */; };
 		C42B8F6E2014DD2B006D1753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42B8F6C2014DD2B006D1753 /* LaunchScreen.storyboard */; };
 		C437C6CC2014E8A2001B6C0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C437C6CB2014E8A2001B6C0B /* Images.xcassets */; };
+		C4AF4E7B20161B6E00B666FD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AF4E7A20161B6E00B666FD /* PostCell.swift */; };
+		C4AF4E7D20161DBA00B666FD /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AF4E7C20161DBA00B666FD /* CircleView.swift */; };
+		C4C0D922201668730056A710 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D921201668730056A710 /* DataService.swift */; };
 		C4DA144D2014F74D00B5DAFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */; };
 		C4DA14522014F95B00B5DAFB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA14512014F95B00B5DAFB /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,9 @@
 		C42B8F6D2014DD2B006D1753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42B8F6F2014DD2B006D1753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C437C6CB2014E8A2001B6C0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C4AF4E7A20161B6E00B666FD /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C4AF4E7C20161DBA00B666FD /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		C4C0D921201668730056A710 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4DA14512014F95B00B5DAFB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		E68FE8EEA0753FE13ED81D6B /* Pods-Capture-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capture-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Capture-app/Pods-Capture-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		C42B8F5F2014DD2B006D1753 /* Capture-app */ = {
 			isa = PBXGroup;
 			children = (
+				C4C0D9202016684D0056A710 /* Services */,
 				C4DA14502014F90A00B5DAFB /* Controller */,
 				C4DA144F2014F90500B5DAFB /* View */,
 				C4DA144E2014F8F800B5DAFB /* Model */,
@@ -92,6 +99,14 @@
 				C42B8F672014DD2B006D1753 /* Capture_app.xcdatamodeld */,
 			);
 			path = "Capture-app";
+			sourceTree = "<group>";
+		};
+		C4C0D9202016684D0056A710 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4C0D921201668730056A710 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C4DA144E2014F8F800B5DAFB /* Model */ = {
@@ -107,6 +122,8 @@
 			children = (
 				C42031362015FB3D006A2B2D /* ShadowView.swift */,
 				C420313A20160047006A2B2D /* RoundImage.swift */,
+				C4AF4E7A20161B6E00B666FD /* PostCell.swift */,
+				C4AF4E7C20161DBA00B666FD /* CircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AF4E7D20161DBA00B666FD /* CircleView.swift in Sources */,
 				C42031372015FB3D006A2B2D /* ShadowView.swift in Sources */,
 				C42B8F692014DD2B006D1753 /* Capture_app.xcdatamodeld in Sources */,
 				C4DA14522014F95B00B5DAFB /* RegisterVC.swift in Sources */,
@@ -279,6 +297,8 @@
 				C42B8F632014DD2B006D1753 /* LoginFormVC.swift in Sources */,
 				C420313B20160047006A2B2D /* RoundImage.swift in Sources */,
 				C42B8F612014DD2B006D1753 /* AppDelegate.swift in Sources */,
+				C4AF4E7B20161B6E00B666FD /* PostCell.swift in Sources */,
+				C4C0D922201668730056A710 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

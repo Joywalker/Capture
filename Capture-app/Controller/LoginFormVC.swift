@@ -11,8 +11,8 @@ import Firebase
 
 class LoginFormVC: UIViewController {
 
-    var loginButton : UIButton!
-    var registerButton : UIButton!
+    @IBOutlet weak var loginButton : UIButton!
+    @IBOutlet weak var registerButton : UIButton!
     @IBOutlet weak var emailText:UITextField!
     @IBOutlet weak var passwordText:UITextField!;
     
@@ -30,9 +30,12 @@ class LoginFormVC: UIViewController {
             Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
                 if let u = user
                 {
+                    
                     self.performSegue(withIdentifier: "loginSucces", sender: nil)
                 }
             })
+        } else {
+            return 
         }
         
     }
