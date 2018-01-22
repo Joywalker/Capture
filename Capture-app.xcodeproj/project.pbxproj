@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		51E3FA930924FCB811DC43AC /* Pods_Capture_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A3D3BC389950F6C3473113 /* Pods_Capture_app.framework */; };
+		C42031352015F6F3006A2B2D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42031342015F6F3006A2B2D /* FeedVC.swift */; };
+		C42031372015FB3D006A2B2D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42031362015FB3D006A2B2D /* ShadowView.swift */; };
+		C420313B20160047006A2B2D /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420313A20160047006A2B2D /* RoundImage.swift */; };
 		C42B8F612014DD2B006D1753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B8F602014DD2B006D1753 /* AppDelegate.swift */; };
 		C42B8F632014DD2B006D1753 /* LoginFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B8F622014DD2B006D1753 /* LoginFormVC.swift */; };
 		C42B8F662014DD2B006D1753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42B8F642014DD2B006D1753 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		10A3D3BC389950F6C3473113 /* Pods_Capture_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capture_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		402347829EB6C9730D531EB3 /* Pods-Capture-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capture-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Capture-app/Pods-Capture-app.debug.xcconfig"; sourceTree = "<group>"; };
+		C42031342015F6F3006A2B2D /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C42031362015FB3D006A2B2D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		C420313A20160047006A2B2D /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		C42B8F5D2014DD2B006D1753 /* Capture-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capture-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B8F602014DD2B006D1753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42B8F622014DD2B006D1753 /* LoginFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormVC.swift; sourceTree = "<group>"; };
@@ -29,7 +35,7 @@
 		C42B8F6D2014DD2B006D1753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42B8F6F2014DD2B006D1753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C437C6CB2014E8A2001B6C0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4DA14512014F95B00B5DAFB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		E68FE8EEA0753FE13ED81D6B /* Pods-Capture-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capture-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Capture-app/Pods-Capture-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +63,6 @@
 		C42B8F542014DD2B006D1753 = {
 			isa = PBXGroup;
 			children = (
-				C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */,
 				C42B8F5F2014DD2B006D1753 /* Capture-app */,
 				C42B8F5E2014DD2B006D1753 /* Products */,
 				FC277BD8DD8FAD7378DED43F /* Pods */,
@@ -82,6 +87,7 @@
 				C437C6CB2014E8A2001B6C0B /* Images.xcassets */,
 				C42B8F642014DD2B006D1753 /* Main.storyboard */,
 				C42B8F6C2014DD2B006D1753 /* LaunchScreen.storyboard */,
+				C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */,
 				C42B8F6F2014DD2B006D1753 /* Info.plist */,
 				C42B8F672014DD2B006D1753 /* Capture_app.xcdatamodeld */,
 			);
@@ -91,6 +97,7 @@
 		C4DA144E2014F8F800B5DAFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C42B8F602014DD2B006D1753 /* AppDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,8 +105,8 @@
 		C4DA144F2014F90500B5DAFB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C42B8F622014DD2B006D1753 /* LoginFormVC.swift */,
-				C4DA14512014F95B00B5DAFB /* RegisterVC.swift */,
+				C42031362015FB3D006A2B2D /* ShadowView.swift */,
+				C420313A20160047006A2B2D /* RoundImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,7 +114,9 @@
 		C4DA14502014F90A00B5DAFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C42B8F602014DD2B006D1753 /* AppDelegate.swift */,
+				C42B8F622014DD2B006D1753 /* LoginFormVC.swift */,
+				C4DA14512014F95B00B5DAFB /* RegisterVC.swift */,
+				C42031342015F6F3006A2B2D /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,9 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42031372015FB3D006A2B2D /* ShadowView.swift in Sources */,
 				C42B8F692014DD2B006D1753 /* Capture_app.xcdatamodeld in Sources */,
 				C4DA14522014F95B00B5DAFB /* RegisterVC.swift in Sources */,
+				C42031352015F6F3006A2B2D /* FeedVC.swift in Sources */,
 				C42B8F632014DD2B006D1753 /* LoginFormVC.swift in Sources */,
+				C420313B20160047006A2B2D /* RoundImage.swift in Sources */,
 				C42B8F612014DD2B006D1753 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
