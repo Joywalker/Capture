@@ -20,6 +20,7 @@
 		C4AF4E7B20161B6E00B666FD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AF4E7A20161B6E00B666FD /* PostCell.swift */; };
 		C4AF4E7D20161DBA00B666FD /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AF4E7C20161DBA00B666FD /* CircleView.swift */; };
 		C4C0D922201668730056A710 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D921201668730056A710 /* DataService.swift */; };
+		C4C0D926201694960056A710 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D925201694960056A710 /* Post.swift */; };
 		C4DA144D2014F74D00B5DAFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */; };
 		C4DA14522014F95B00B5DAFB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA14512014F95B00B5DAFB /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		C4AF4E7A20161B6E00B666FD /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		C4AF4E7C20161DBA00B666FD /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		C4C0D921201668730056A710 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C4C0D925201694960056A710 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C4DA144C2014F74D00B5DAFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4DA14512014F95B00B5DAFB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		E68FE8EEA0753FE13ED81D6B /* Pods-Capture-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capture-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Capture-app/Pods-Capture-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				C42B8F602014DD2B006D1753 /* AppDelegate.swift */,
+				C4C0D925201694960056A710 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AF4E7D20161DBA00B666FD /* CircleView.swift in Sources */,
+				C4C0D926201694960056A710 /* Post.swift in Sources */,
 				C42031372015FB3D006A2B2D /* ShadowView.swift in Sources */,
 				C42B8F692014DD2B006D1753 /* Capture_app.xcdatamodeld in Sources */,
 				C4DA14522014F95B00B5DAFB /* RegisterVC.swift in Sources */,
