@@ -11,7 +11,8 @@ import UIKit
 class CircleView: UIImageView {
 
     override func layoutSubviews() {
-        layer.cornerRadius = frame.width/2
+        layer.cornerRadius = frame.width/4
+        clipsToBounds=true
     }
 }
 

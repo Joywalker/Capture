@@ -19,23 +19,47 @@ class RegisterVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func alert(message: String, title: String = "") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func registerButtonPressed(_ sender: Any) {
-            let username = usernameText.text!
-            let email = emailText.text!
-            let password = passwordText.text!
+            var username = usernameText.text!
+            var email = emailText.text!
+            var password = passwordText.text!
+        
+        var passwordOK : Bool = false
+        var emailOK : Bool = false
+        
+        if (password.count < 8 ) {
+            alert(message: "Password must be over 8 characters", title: "Password")
+            passwordText.text = ""
             
+        } else
+        {
+            passwordOK = true
+        }
+        if(!email.contains("@") && (email.count < 15))
+        {
+           self.alert(message: "Enter a valid email address", title: "Email")
+           emailText.text = ""
+            
+        } else
+        {
+            emailOK = true
+        }
+        
+        if emailOK && passwordOK {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, err) in
                 
                 if err != nil {
-                    
-                        if username=="", password=="",email==""
-                        {
-                    var alert = UIAlertController(title: "Registration", message: "Please enter valid information.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.show(self, sender: nil)
+                    self.alert(message: "Please enter valid information", title: "Registration")
                     }
-                    
-                } else {
-                    
+                    else {
                     UserDefaults.standard.setValue(user?.uid, forKey: "uid")
                     Database.database().reference().child("Users").setValue([user!.uid : ["email" : email,"password" : password, "username" : username]])
                     
@@ -44,8 +68,8 @@ class RegisterVC: UIViewController {
                     self.present(Alert, animated: true, completion: nil)
                     self.view.endEditing(true)
                 }
-            })
-    
+                })
+        }
     }
 }
 

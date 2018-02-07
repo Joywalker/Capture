@@ -70,7 +70,6 @@
                                 <state key="normal" image="loginButton"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9vZ-fq-W8t"/>
-                                    <segue destination="4Iq-mN-6pt" kind="show" identifier="loginSucces" id="4Wr-JW-EuC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-ea-ito">
@@ -141,6 +140,7 @@
                         <outlet property="passwordText" destination="sMw-Fq-fng" id="7eF-b4-umZ"/>
                         <outlet property="registerButton" destination="CXk-ea-ito" id="nCI-Nj-3bg"/>
                         <segue destination="KCt-h7-6s6" kind="show" identifier="registerVC" id="rG6-t3-NyG"/>
+                        <segue destination="4Iq-mN-6pt" kind="showDetail" identifier="loginSucces" id="ac7-Bt-Rmb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -322,7 +322,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="fill" text="Feed" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-zb-DFW">
-                                <rect key="frame" x="139" y="17" width="136" height="30"/>
+                                <rect key="frame" x="139" y="25" width="136" height="30"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LYE-Ln-6Ad"/>
@@ -338,12 +338,10 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94Z-uf-8Jw" userLabel="BackButton">
-                                <rect key="frame" x="7" y="9" width="46" height="46"/>
+                                <rect key="frame" x="7" y="14" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Ahv-iq-Tqq"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="F9a-nm-vdh"/>
                                     <constraint firstAttribute="height" constant="46" id="mDD-hk-E0I"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="uSM-lq-9oe"/>
                                 </constraints>
                                 <state key="normal" image="unnamed-1"/>
                                 <connections>
@@ -357,14 +355,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJy-uA-3BA">
                                         <rect key="frame" x="8" y="4" width="374" height="52"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcI-fA-Y0v">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-He-oUk" customClass="CircleView" customModule="Capture_app" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="4" width="44" height="44"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="RtP-Jv-4MV"/>
-                                                    <constraint firstAttribute="width" constant="44" id="eqJ-3L-sPl"/>
+                                                    <constraint firstAttribute="height" constant="44" id="bIn-ab-ExA"/>
+                                                    <constraint firstAttribute="width" constant="44" id="xqx-zm-EPE"/>
                                                 </constraints>
-                                                <state key="normal" image="images"/>
-                                            </button>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="j6Z-Ff-b3F" appends="YES" id="0DH-y1-776"/>
+                                                </connections>
+                                            </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyr-Wl-Lr8">
                                                 <rect key="frame" x="54" y="11" width="230" height="30"/>
                                                 <constraints>
@@ -377,12 +378,17 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3F-jy-ttH">
                                                 <rect key="frame" x="294" y="11" width="80" height="30"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="HCj-xi-CMx"/>
                                                 </constraints>
                                                 <state key="normal" title="Post" backgroundImage="Rectangle">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="postButtonPressed:" destination="4Iq-mN-6pt" eventType="touchUpInside" id="w5G-i3-yID"/>
+                                                    <outletCollection property="gestureRecognizers" destination="djf-5m-bRp" appends="YES" id="ydn-v8-VA1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -443,7 +449,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v5L-R8-5x2">
                                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="65"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BWRy3rlCUAAnPWJ" translatesAutoresizingMaskIntoConstraints="NO" id="DQ2-Ei-Ezt" customClass="CircleView" customModule="Capture_app" customModuleProvider="target">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poza_eu" translatesAutoresizingMaskIntoConstraints="NO" id="DQ2-Ei-Ezt" customClass="CircleView" customModule="Capture_app" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="65" id="AaY-um-zOa"/>
@@ -547,7 +553,7 @@
                             <constraint firstItem="ECo-oQ-drj" firstAttribute="trailing" secondItem="eQN-Vs-Fg0" secondAttribute="trailing" id="D5U-2h-lli"/>
                             <constraint firstItem="6F8-Uq-0pS" firstAttribute="leading" secondItem="eQN-Vs-Fg0" secondAttribute="leading" constant="12" id="Kvf-8D-bO2"/>
                             <constraint firstItem="oYg-Ay-cxt" firstAttribute="top" secondItem="XmE-K3-cht" secondAttribute="top" id="SIx-y0-Niv"/>
-                            <constraint firstItem="94Z-uf-8Jw" firstAttribute="top" secondItem="XmE-K3-cht" secondAttribute="top" constant="9" id="SiE-T7-424"/>
+                            <constraint firstItem="94Z-uf-8Jw" firstAttribute="top" secondItem="XmE-K3-cht" secondAttribute="top" constant="14" id="SiE-T7-424"/>
                             <constraint firstItem="94Z-uf-8Jw" firstAttribute="leading" secondItem="eQN-Vs-Fg0" secondAttribute="leading" constant="7" id="U5N-fd-rAd"/>
                             <constraint firstItem="6F8-Uq-0pS" firstAttribute="top" secondItem="oYg-Ay-cxt" secondAttribute="bottom" constant="10" id="VgB-r1-YTi"/>
                             <constraint firstItem="oYg-Ay-cxt" firstAttribute="trailing" secondItem="eQN-Vs-Fg0" secondAttribute="trailing" id="ab6-Rl-2lo"/>
@@ -556,23 +562,34 @@
                             <constraint firstItem="ECo-oQ-drj" firstAttribute="leading" secondItem="eQN-Vs-Fg0" secondAttribute="leading" id="ldi-fX-nID"/>
                             <constraint firstItem="eQN-Vs-Fg0" firstAttribute="trailing" secondItem="6F8-Uq-0pS" secondAttribute="trailing" constant="12" id="lxz-03-PD8"/>
                             <constraint firstItem="ECo-oQ-drj" firstAttribute="bottom" secondItem="eQN-Vs-Fg0" secondAttribute="bottom" id="m3H-zl-8Bz"/>
-                            <constraint firstItem="4nz-zb-DFW" firstAttribute="top" secondItem="XmE-K3-cht" secondAttribute="top" constant="17" id="sUZ-w7-PKq"/>
+                            <constraint firstItem="4nz-zb-DFW" firstAttribute="top" secondItem="XmE-K3-cht" secondAttribute="top" constant="25" id="sUZ-w7-PKq"/>
                             <constraint firstItem="oYg-Ay-cxt" firstAttribute="leading" secondItem="eQN-Vs-Fg0" secondAttribute="leading" id="zIH-ez-HmQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eQN-Vs-Fg0"/>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="2Ti-He-oUk" id="8om-su-Pyl"/>
+                        <outlet property="postField" destination="gyr-Wl-Lr8" id="nFo-bu-Ekl"/>
                         <outlet property="tableView" destination="ECo-oQ-drj" id="BXw-F1-17s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEr-om-ifc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="j6Z-Ff-b3F">
+                    <connections>
+                        <action selector="selectImageLogoTouched:" destination="4Iq-mN-6pt" id="lsU-DH-J5d"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="djf-5m-bRp">
+                    <connections>
+                        <action selector="postButtonPressed:" destination="4Iq-mN-6pt" id="lmH-Xh-CEO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-990" y="901"/>
+            <point key="canvasLocation" x="-941" y="863"/>
         </scene>
     </scenes>
     <resources>
         <image name="6357381-wallpaper-phone" width="450" height="800"/>
-        <image name="BWRy3rlCUAAnPWJ" width="600" height="600"/>
         <image name="Rectangle" width="147" height="24"/>
         <image name="Rectangle-1" width="375" height="65"/>
         <image name="Username" width="152" height="19"/>
@@ -581,6 +598,7 @@
         <image name="like button 1" width="535" height="281"/>
         <image name="loginButton" width="350" height="52"/>
         <image name="passwordIcon" width="256" height="256"/>
+        <image name="poza_eu" width="600" height="600"/>
         <image name="regBG" width="474" height="746"/>
         <image name="signUpText" width="904" height="450"/>
         <image name="textFieldRegister" width="295" height="48"/>

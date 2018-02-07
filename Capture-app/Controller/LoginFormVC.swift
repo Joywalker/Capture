@@ -18,31 +18,42 @@ class LoginFormVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func alert(message: String, title: String = "") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        let email = emailText.text
-        let password=passwordText.text
-        
-        if email != "" && password != ""{
-            Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
-                if let u = user
-                {
-                    
-                    self.performSegue(withIdentifier: "loginSucces", sender: nil)
+        let email = emailText.text!
+        let password=passwordText.text!
+        print(email.count)
+        print(password.count)
+        if email.count != 0 && password.count != 0 {
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                    if error == nil && user != nil
+                    {
+                        self.performSegue(withIdentifier: "loginSucces", sender: nil)
+                        
+                    } else{
+                        self.alert(message: "This user doesn't exist", title: "Login")
+                        self.emailText.text=""
+                        self.passwordText.text=""
                 }
-            })
-        } else {
-            return 
-        }
-        
+            })} else
+                    {
+                        self.alert(message: "Try again", title: "Login")
+                        emailText.text=""
+                        passwordText.text=""
+                    }
     }
     @IBAction func registerHere(_ sender: Any) {
-        performSegue(withIdentifier: "registerVC", sender: title )
+        self.performSegue(withIdentifier: "registerVC", sender: title )
     }
 }
 
